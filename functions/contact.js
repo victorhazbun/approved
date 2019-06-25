@@ -3,7 +3,7 @@ import querystring from "querystring";
 exports.handler = async (event, context, callback) => {
   // Only allow POST
   if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
+    return { statusCode: 404, body: "Method Not Allowed" };
   }
 
   // When the method is POST, the name will no longer be in the event’s
