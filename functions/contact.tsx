@@ -1,6 +1,6 @@
 import querystring from "querystring";
 
-exports.handler = async (event, context) => {
+exports.handler = async (event, context, callback) => {
   // Only allow POST
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -10,9 +10,9 @@ exports.handler = async (event, context) => {
   // queryStringParameters – it’ll be in the event body encoded as a query string
   const params = querystring.parse(event.body);
   const fullName = params.fullName || "Guest";
-
-  return {
+  
+  callback(null, {
     statusCode: 200,
     body: `We will contact you soon, ${fullName}.`
-  };
+  });
 };
