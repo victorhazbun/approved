@@ -38,6 +38,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "start:lambda": "netlify-lambda serve src/lambda",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,ts,jsx}",
     "start": "npm run develop",
@@ -45,7 +46,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "type-check": "tsc --noEmit",
     "lint": "tslint --project .",
-    "build:lambda": "netlify-lambda build src/lambda",
+    "build:lambda": "netlify-lambda build src/lambda"
   },
   "repository": {
     "type": "git",
