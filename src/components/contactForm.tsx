@@ -11,7 +11,7 @@ export default class ContactForm extends React.Component {
 
   public render() {
     return (
-      <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+      <form name="contact" action="/.netlify/functions/contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
         <p style={this.state.botFieldStyle}>
           <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
         </p>
