@@ -1,6 +1,6 @@
 import querystring from "querystring";
 
-exports.handler = async (event, context, callback) => {
+exports.handler = (event, context, callback) => {
   // Only allow POST
   if (event.httpMethod !== "POST") {
     return { statusCode: 404, body: "Method Not Allowed" };
